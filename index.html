@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="styles/style.css"/>
+  <title>Hello, World!</title>
+</head>
+<body>
+  <h1>
+    Hello, World!
+  </h1>
+  <input type="checkbox" id="sel" value="Hello"           onclick="sel()">Hello
+   <input type="checkbox" id="sel2" value="How are you" onclick="selec()">How are you
+   <input type="checkbox" id="sel3" value="Hi" onclick="sele()">Hi
+  <p></p>
+  <script>
+  function sel(){
+  var sel = document.getElementById("sel").value;
+    var para = document.querySelector("p");
+  if(sel =="Hello"){
+    
+    para.innerHTML = " GOOD!";
+    para.style.backgroundColor = "green";
+    document.getElementById("sel2").style.visibility ="hidden"; 
+    document.getElementById("sel3").style.visibility ="hidden"; 
+  }
+  else{
+    alert("fail");
+  }
+  }
+  
+   function selec(){
+  var sel2 = document.getElementById("sel2").value;
+    var para = document.querySelector("p");
+  if(sel2 =="How are you"){
+  para.innerHTML = " fail!";
+  document.getElementById("sel3").style.visibility ="hidden"; 
+ document.getElementById("sel").style.visibility ="hidden";   para.style.backgroundColor = "red";
+  }
+  else{
+    alert("good");
+  }
+  }
+  
+   function sele(){
+  var sel3 = document.getElementById("sel3").value;
+     var para = document.querySelector("p");
+  if(sel3 =="Hi"){
+    para.innerHTML = " Fail!";
+    para.style.backgroundColor = "red";
+   document.getElementById("sel").style.visibility ="hidden"; 
+    document.getElementById("sel2").style.visibility ="hidden"; 
+  }
+  else{
+    alert("good");
+  }
+  }
+  </script>
+</body>
+</html>
